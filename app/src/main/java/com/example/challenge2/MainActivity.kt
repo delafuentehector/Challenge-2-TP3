@@ -15,6 +15,8 @@ import com.example.challenge2.ui.theme.Challenge2Theme
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.challenge2.ui.components.BottomBar
+import com.example.challenge2.ui.components.TopBar
 import com.example.challenge2.ui.navigation.Screen
 import com.example.challenge2.ui.screens.ItemListScreen
 import com.example.challenge2.ui.screens.ItemDetailScreen
@@ -29,7 +31,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             Challenge2Theme {
                 val nav = rememberNavController()
-                Scaffold(modifier = Modifier.fillMaxSize()) { inner ->
+                Scaffold(topBar = { TopBar(title = "TITLE") },
+                    bottomBar = { BottomBar(navController = nav) }, modifier = Modifier.fillMaxSize()) { inner ->
                     NavHost(
                         navController = nav,
                         startDestination = Screen.ItemList.route,
