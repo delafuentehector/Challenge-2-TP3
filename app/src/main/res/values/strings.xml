@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Challenge 2</string>
+    <string name="add_fav">Add to favourites</string>
+    <string name="buy">Buy</string>
+    <string name="nombre_producto">Leather boots</string>
+    <string name="precio_producto">27,5 $</string>
+    <string name="descripcion_producto">Great warm shoes from the artificial leather. You can buy this model only in our shop</string>
 </resources>

@@ -31,8 +31,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             Challenge2Theme {
                 val nav = rememberNavController()
-                Scaffold(topBar = { TopBar(title = "TITLE") },
-                    bottomBar = { BottomBar(navController = nav) }, modifier = Modifier.fillMaxSize()) { inner ->
+                Scaffold(
+                    topBar = { TopBar(title = "Shop list") },
+                    bottomBar = { BottomBar(navController = nav) },
+                    modifier = Modifier.fillMaxSize()) { inner ->
                     NavHost(
                         navController = nav,
                         startDestination = Screen.ItemList.route,
